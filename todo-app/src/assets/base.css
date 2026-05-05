@@ -50,7 +50,7 @@
   }
 }
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -61,6 +61,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
+  background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -82,4 +83,4 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */

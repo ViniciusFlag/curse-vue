@@ -11,8 +11,6 @@ export const useTodoListStore = defineStore("todoList", {
   actions: {
     addTodo(item) {
       this.todoList.push({ item, id: this.id++, completed: false });
-
-      console.log(this.todoList);
     },
     deleteTodo(itemId) {
       this.todoList = this.todoList.filter((object) => {
@@ -23,7 +21,7 @@ export const useTodoListStore = defineStore("todoList", {
       const todo = this.todoList.find((obj) => obj.id === idToFind);
 
       if (todo) {
-        todo.completed = !todo.completed
+        todo.completed = !todo.completed;
       }
     }
   },
