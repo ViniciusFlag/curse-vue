@@ -4,7 +4,20 @@ export const useTodoListStore = defineStore("todoList", {
   // state
   state: () => ({
     todoList: [],
+    id: 0
   }),
   // getters
   // actions
+  actions: {
+    addTodo(item) {
+      this.todoList.push({ item, id: this.id++, completed: false });
+
+      console.log(this.todoList);
+    },
+    deleteTodo(itemId) {
+      this.todoList = this.todoList.filter((object) => {
+        return object.id !== itemId
+      });
+    },
+  },
 });
